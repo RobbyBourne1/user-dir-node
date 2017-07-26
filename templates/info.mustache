@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/style.css">
-    <title>User Info</title>
-  </head>
-  <body>
-    <div class="wrapper-info">
-      <div class="info-page">
-        <div class="img-name">
-          <img class="rounded-img" src="{{avatar}}" alt="">
-          <div class="name-info">
-            <h1>{{name}}</h1>
-            <div class="contact-info">
-            <p>{{#city}}{{address.city}}, {{address.country}}{{/city}}</p>
-            <p>{{^city}}{{address.country}}{{/city}}</p>
-            <p>{{#job}}{{job}}{{/job}}</p>
-            <p class="avail">{{^job}}Available For Hire{{/job}}</p>            <p>{{email}}</p>
-            <p>{{phone}}</p>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  <title>User Info</title>
+</head>
+
+<body>
+  <div class="wrapper-info">
+    <div class="info-page">
+      <div class="img-name">
+        <img class="rounded-img" src="{{avatar}}" alt="">
+        <div class="name-info">
+          <h1>{{name}}</h1>
+          <div class="contact-info">
+            <div class="row1">
+              <p>
+                {{#city}}{{address.city}}, {{address.country}}{{/city}}
+              </p>
+              <p>{{^city}}{{address.country}}{{/city}}
+              </p>
+              <p>
+                {{#job}}{{job}}{{/job}}
+              </p>
+              <p class="avail">{{^job}}Available For Hire{{/job}}
+              </p>
+            </div>
+            <div class="row2">
+              <p>{{email}}</p>
+              <p>{{phone}}</p>
             </div>
           </div>
         </div>
-        <div class="ed-skills">
-          <ul>
-            <li>
-                <h3>Education</h3>
-              <div class="education">
-                <p>{{university}}</p>
-              </div>
-            </li>
-            <li>
-              <h3>Skills</h3>
-              <ul class="skill-list">
-                {{#skills}}
+      </div>
+      <div class="ed-skills">
+        <ul>
+          <li>
+            <h3>Education</h3>
+            <div class="education">
+              <p>{{university}}</p>
+            </div>
+          </li>
+          <li>
+            <h3 class="skill">Skills</h3>
+            <ul class="skill-list">
+              {{#skills}}
                 <li class="skills">{{.}}</li>
-                {{/skills}}
-              </ul>
+              {{/skills}}
+            </ul>
 
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

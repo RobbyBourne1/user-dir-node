@@ -61,14 +61,20 @@ h1 {
 
 .contact-info {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: flex-start;
   margin: 0;
   width: 18em;
 }
 
-.contact-info > p:nth-child(3),
-.contact-info > p:nth-child(6) {
+.row1,
+.row2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.row1 > p:nth-child(3),
+.row2 > p:nth-child(2) {
   border-left: 1px solid grey;
   padding-left: .5em;
 }
@@ -81,6 +87,7 @@ h1 {
 ul {
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
@@ -106,6 +113,11 @@ li {
 
 .skill-list {
   width: 6em;
+  margin-right: 3.5em;
+}
+
+.skill {
+  margin-left: 2em;
 }
 
 h3 {
