@@ -1,0 +1,86 @@
+.directory {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.dirInfo {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  border: .5px solid #666;
+  padding: 1em;
+  margin: .5em;
+  width: 10em;
+}
+
+img {
+  width: 10em;
+  height: 10em;
+  margin: .5em 0;
+}
+
+h2 {
+  color: blue;
+  font-size: 1em;
+  margin: .35em;
+}
+
+p {
+  color: grey;
+  font-size: .75em;
+  margin: .35em;
+}
+.avail {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Info Page CSS*/
+
+.img-name {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.info-page {
+  margin: 1em;
+}
+
+.name-info {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: .5em;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 0;
+}
+
+.rounded-img {
+  border-radius: 80px;
+  margin: 1em;
+}
+
+ul {
+  display: flex;
+  flex-flow: column wrap;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20em;
+}

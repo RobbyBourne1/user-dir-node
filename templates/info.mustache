@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>User Info</title>
+  </head>
+  <body>
+    <div class="wrapper-info">
+      <div class="info-page">
+        <div class="img-name">
+          <img class="rounded-img" src="{{avatar}}" alt="">
+          <div class="name-info">
+            <h1>{{name}}</h1>
+            <div class="contact-info">
+            <p>{{address.city}}, {{address.country}}</p>
+            <p>{{job}}</p>
+            <p>{{email}}</p>
+            <p>{{phone}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ed-skills">
+          <ul>
+            <li>
+              <h3>Education</h3>
+              <p>{{university}}</p>
+            </li>
+            <li>
+              <h3>Skills</h3>
+              <p>{{skills}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
