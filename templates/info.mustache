@@ -17,9 +17,9 @@
           <div class="contact-info">
             <div class="row1">
               <p>
-                {{#city}}{{address.city}}, {{address.country}}{{/city}}
+                {{#address.city}}{{address.city}}, {{address.country}}{{/address.city}}
               </p>
-              <p>{{^city}}{{address.country}}{{/city}}
+              <p>{{^address.city}}{{address.country}}{{/address.city}}
               </p>
               <p>
                 {{#job}}{{job}}{{/job}}
@@ -34,13 +34,27 @@
           </div>
         </div>
       </div>
-      <div class="ed-skills">
+      <div class="details">
+        <dl>
+          {{#university}}
+          <dt>Education</dt>
+          <dd>{{university}}</dd>
+          {{/university}}
+          <dt>Skills</dt>
+          {{#skills}}
+          <dd>{{.}}</dd>
+          {{/skills}}
+        </dl>
+      </div>
+      <!-- <div class="ed-skills">
         <ul>
           <li>
+            {{#university}}
             <h3>Education</h3>
             <div class="education">
               <p>{{university}}</p>
             </div>
+            {{/university}}
           </li>
           <li>
             <h3 class="skill">Skills</h3>
@@ -52,7 +66,7 @@
 
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 </body>
