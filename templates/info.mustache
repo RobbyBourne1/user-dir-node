@@ -13,9 +13,10 @@
           <div class="name-info">
             <h1>{{name}}</h1>
             <div class="contact-info">
-            <p>{{address.city}}, {{address.country}}</p>
-            <p>{{job}}</p>
-            <p>{{email}}</p>
+            <p>{{#city}}{{address.city}}, {{address.country}}{{/city}}</p>
+            <p>{{^city}}{{address.country}}{{/city}}</p>
+            <p>{{#job}}{{job}}{{/job}}</p>
+            <p class="avail">{{^job}}Available For Hire{{/job}}</p>            <p>{{email}}</p>
             <p>{{phone}}</p>
             </div>
           </div>
@@ -23,12 +24,19 @@
         <div class="ed-skills">
           <ul>
             <li>
-              <h3>Education</h3>
-              <p>{{university}}</p>
+                <h3>Education</h3>
+              <div class="education">
+                <p>{{university}}</p>
+              </div>
             </li>
             <li>
               <h3>Skills</h3>
-              <p>{{skills}}</p>
+              <ul class="skill-list">
+                {{#skills}}
+                <li class="skills">{{.}}</li>
+                {{/skills}}
+              </ul>
+
             </li>
           </ul>
         </div>

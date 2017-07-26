@@ -53,7 +53,6 @@ a {
 .name-info {
   display: flex;
   flex-flow: column wrap;
-  margin-left: .5em;
 }
 
 h1 {
@@ -62,9 +61,16 @@ h1 {
 
 .contact-info {
   display: flex;
-  flex-flow: row;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   margin: 0;
+  width: 18em;
+}
+
+.contact-info > p:nth-child(3),
+.contact-info > p:nth-child(6) {
+  border-left: 1px solid grey;
+  padding-left: .5em;
 }
 
 .rounded-img {
@@ -76,11 +82,32 @@ ul {
   display: flex;
   flex-flow: column wrap;
   list-style: none;
+  padding: 0;
 }
 
 li {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 20em;
+}
+
+.education {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.skills {
+  display: flex;
+  justify-content: flex-start;
+  color: grey;
+  font-size: .75em;
+}
+
+.skill-list {
+  width: 6em;
+}
+
+h3 {
+  margin-right: 1em;
 }
